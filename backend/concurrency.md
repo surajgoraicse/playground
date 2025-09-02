@@ -12,15 +12,6 @@ You are designing a **ticket booking system** for a concert.
 
 ### solution : 
 
-- mutex lock should also enclose the case where ticketCount = 0
-```go
-if ticketCount == 0 {
-	fmt.Println("No more tickets are available")
-	return
-}
-```
-
-
 ```go
 package main
 
@@ -69,6 +60,16 @@ func main() {
 }
 ```
 
+### NOTE : 
+
+- mutex lock should also enclose the case where ticketCount = 0
+```go
+if ticketCount == 0 {
+	fmt.Println("No more tickets are available")
+	return
+}
+```
+
 
 
 ## problem 2 : banking system to simulate deposite and withdraw
@@ -85,9 +86,6 @@ You are building a **banking system** where multiple users can **deposit** and *
 
 ### solution : 
 
-- define deposite and withdraw function seperately.
-	- use rand.Intn(2) for equal probability for calling methods.
-- handle the situation of withdraw when balance is 0 and less than withdraw amount. 
 
 ```go
 package main
@@ -147,6 +145,10 @@ func main() {
 }
 ```
 
+### NOTE : 
 
+- define deposite and withdraw function seperately.
+	- use rand.Intn(2) for equal probability for calling methods.
+- handle the situation of withdraw when balance is 0 and less than withdraw amount. 
 
 ## 3. 
